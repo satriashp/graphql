@@ -4,7 +4,7 @@ php:
   - '7.2'
 
 before_script:
-  - travis_retry composer instlal --prefer-source --no-interaction --dev
+  - travis_retry composer install --prefer-source --no-interaction --dev
   - cp .env.example .env
   - php artisan key:generate
 
