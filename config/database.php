@@ -7,7 +7,7 @@ $DATABASE_URL = [
     "pass" => null
 ];
 
-if (env('APP_ENV', 'production') === 'production') {
+if (getenv('APP_ENV') == 'production') {
     $DATABASE_URL = parse_url(getenv("DATABASE_URL"));
 }
 
