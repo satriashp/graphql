@@ -17,3 +17,5 @@ deploy:
     secure: "41264fe5-4015-44ba-a602-69a90f073032"
   app: graphql-shp
   on: master
+  run:
+    - 'php artisan migrate --force'
