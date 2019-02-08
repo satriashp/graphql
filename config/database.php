@@ -7,8 +7,8 @@ $DATABASE_URL = [
     "pass" => null
 ];
 
-if (env('APP_ENV') == 'production') {
-    $DATABASE_URL = parse_url(env("DATABASE_URL"));
+if (getenv('APP_ENV') == 'production') {
+    $DATABASE_URL = parse_url(getenv("DATABASE_URL"));
 }
 
 return [
@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => getenv('DB_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
